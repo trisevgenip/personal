@@ -18,4 +18,4 @@ This is a collaboration with Zach Horne's lab at the University of Edinburgh and
 
 **[<i class="fa-solid fa-up-right-from-square"></i> Read my Blog Post for the Alan Turing Institute](https://www.turing.ac.uk/blog/facts-dont-change-minds-and-theres-data-prove-it)**
 
-**[<i class="fa-brands fa-edge"></i> Watch my Project Pitch at AI UK 2024](https://www.youtube.com/watch?time_continue=1&v=fei9SSxCUm8&embeds_referring_euri=https%3A%2F%2Fwww.turing.ac.uk%2F&source_ve_path=Mjg2NjY)**
+**[<i class="fa-brands fa-video"></i> Watch my Project Pitch at AI UK 2024](https://www.youtube.com/watch?time_continue=1&v=fei9SSxCUm8&embeds_referring_euri=https%3A%2F%2Fwww.turing.ac.uk%2F&source_ve_path=Mjg2NjY)**
