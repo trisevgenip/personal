@@ -1,15 +1,14 @@
 # Modeling Belief Networks on r/ChangeMyView
-Enhance your productivity by leveraging advanced clipboard functionalities.
+‘Change My View' is a Reddit forum where users engage in structured debates with the goal of persuading each other to reconsider their beliefs. This forum provides a rich dataset on commonly held beliefs and effective argumentation.
+
+In this project we aim to model population-level belief networks and explore the effect of intervention longitudinally. In parallel, we are developing an analytical pipeline to assign beliefs to users based on raw text from the posts, combining traditional NLP tools, LLMs and .
+
+This is a collaboration with Zach Horne's lab at the University of Edinburgh and Derek Powell's lab at Arizona State University.
 <br>
 
-<img src="https://github.com/tobwil/markdown_website/assets/72387477/1581cf8f-bf5e-4af0-8e24-c02be2623d5a" height="200">
+<img src="https://i.ibb.co/ZJ4mZyH/aiuk24-photography-091.jpg" height="200">
 <br>
 
-## Top 3 Features
-
-* ⚡ Instant Usage
-* 🔒 Local Storage Privacy
-* 📋 Extended Clipboard
 <br>
 
 **[<i class="fa-solid fa-up-right-from-square"></i> Read my Blog Post for the Alan Turing Institute](https://www.turing.ac.uk/blog/facts-dont-change-minds-and-theres-data-prove-it)**
