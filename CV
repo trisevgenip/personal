@@ -1,0 +1,11 @@
+---
+layout: single
+title: "Curriculum Vitae"
+sitemap: false
+permalink: /Curriculum/
+author_profile: TRUE
+header:
+  image: assets/images/banner.jpg
+---
+
+<embed src="CV_20250122.pdf" type="application/pdf" />
