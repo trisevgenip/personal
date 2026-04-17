@@ -1,423 +1,820 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
-  <link rel="icon" type="image/jpg" href="https://i.ibb.co/zQX5jzW/IMG-5070-2.jpg">
-  <title>Tris Papakonstantiou</title>
-  <style>
-.markdown-container img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.markdown-container h2 {
-  font-weight: bold;
-}
-
-.markdown-container ul {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-}
-
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-  </style>
-</head>
-<body class="bg-white relative">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tris Papakonstantinou — Personal Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-/* Add necessary dark mode styles for the footer */
-.dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
-  background-color: #333333;
-}
-.dark-mode {
-  background-color: #1a1a1a;
-}
-.dark-mode footer,
-.dark-mode footer .text-gray-600 {
-  color: #f8f8f8;
-}
-    .dark-mode .text-white,
-    .dark-mode .text-black,
-    .dark-mode .text-gray-900,
-    .dark-mode h1,
-    .dark-mode h2,
-    .dark-mode h3,
-    .dark-mode h4,
-    .dark-mode .bg-white .card-content,
-    .dark-mode .bg-white div {
-      color: #f8f8f8;
-    }
-    .dark-mode .bg-white {
-      background-color: #1a1a1a;
-    }
-    .dark-mode .shadow-md {
-      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
-    }
-  </style>
-  <div id="particles-js"></div>
-<nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
-    <div>
-      <span class="text-black font-bold"></span><span class="text-black"></span>
-    </div>
-    <button id="dark-mode-toggle" class="ml-4 p-2  text-black rounded shadow-md">🌓</button>
-  </nav>
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    <div id="header-container" class="px-2 py-5 mt-8 space-x-4">
-      <h1 class="text-8xl font-bold mb-10">Tris Papakonstantinou</h1>
-      <h2 class="text-xl mb-3">Interdisciplinary Cognitive Scientist
-        <br><b>Beliefs, Models & Change</b></h2>
-      <br>
-      <div class="flex space-x-4">
-        <a href="https://www.linkedin.com/in/trisevgeni" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/trisevgenipap" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://trisevgeni.substack.com" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fa-solid fa-pencil"></i></a>
-        <a href="mailto:ucjutpa@ucl.ac.uk" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fas fa-envelope"></i></a>
-        <a href="CV_20250122.pdf" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><b>CV</b></b></a> 
-<!--          <i class="fa-regular fa-file-lines"></i>
- -->
-      </div>
-      <br><br>
- 
-    </div>
-  </div>
-  <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
-      <div id="projects-container" class="w-full md:w-2/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-magnifying-glass"></i> Doctoral Projects</h3>
-      <h4 class="text-sm italic mb-4">What I am working on as my core PhD research</h4>
-      <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-wrap">
-        <!-- Fetched Projects Markdown files will be displayed here -->
-      </div>
-    </div>
-    <div id="projects-container" class="w-full md:w-1/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i> Misc Research Projects</h3>
-      <h4 class="text-sm italic mb-4">Some of my other interests and research collaborations</h4>
-        <div id="posts-list" class="space-y-4">
-        <!-- Fetched Posts Markdown files will be displayed here -->
-      </div>
-    </div>
-    
-    </div>
-    <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <div id="projects-container" class="w-full md:w-1/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-pencil"></i> Recent Writings</h3>
-      <h4 class="text-sm italic mb-4">A collection of ideas and thoughts</h4>
-
-        <div id="substack-feed-embed"></div>
-          <div id="projects-container" class="w-full md:w-1/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-code"></i> Other Endeavours</h3>
-      <h4 class="text-sm italic mb-4">As much as I love academic research, the world is vast</h4>
-      <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-wrap">
-        <!-- Fetched Projects Markdown files will be displayed here -->
-      </div>
-          </div>
-        <script>
-          window.SubstackFeedWidget = {
-            substackUrl: "trisevgeni.substack.com",
-            posts: 3
-          };
-        </script>
-        <script src="https://substackapi.com/embeds/feed.js" async></script>
-      </div>
-    </div>
-  </div>
-    <script>
-      document.getElementById("dark-mode-toggle").addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-  
-        const toggleBtn = document.getElementById("dark-mode-toggle");
-        const isDarkModeOn = document.body.classList.contains("dark-mode");
-  
-        toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
-      });
-    </script>
-
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-  <script>
-      const postsList = document.getElementById('posts-list');
-    const projectsList = document.getElementById('projects-list');
-    const converter = new showdown.Converter({
-      simpleLineBreaks: true,
-      strikethrough: true,
-      tables: true,
-    });
-    const baseUrl = "https://api.github.com/repos/trisevgenip/personal/contents/";
-    const folders = ['posts', 'projects', 'listening'];
-
-    async function fetchMarkdownFiles(folder) {
-      const response = await fetch(`${baseUrl}${folder}`);
-      const files = await response.json();
-      function shuffleArray(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [array[i], array[j]] = [array[j], array[i]];
-          }
-          return array;
-      }
-
-      const randomFiles = shuffleArray(files);
-      const maxVisibleItems = folder === 'posts' ? 3 : folder === 'projects' ? 5 : Infinity;
-      let itemCount = 0;
-
-      for (const file of randomFiles) {
-        if (file.name.endsWith('.md')) {
-          const fileRes = await fetch(file.download_url);
-          const mdContent = await fileRes.text();
-          const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
-          const htmlContent = converter.makeHtml(mdWithLineBreaks);
-
-          const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
-          const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
-          const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
-          const fileCard = `
-              <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
-                <h2 class="text-xl font-semibold mb-2">${title}</h2>
-                <div>${htmlContentWithoutTitle}</div>
-              </div>
-          `;
-
-          if (itemCount < maxVisibleItems) {
-            if (folder === 'posts') {
-              postsList.innerHTML += fileCard;
-            } else if (folder === 'projects') {
-              projectsList.innerHTML += fileCard;
-            } else if (folder === 'listening') {
-              document.getElementById('listening-list').innerHTML += fileCard;
-            }
-          } else {
-            if (folder !== 'listening') {
-              const hiddenCard = `<div class='hidden'>${fileCard}</div>`;
-              if (folder === 'posts') {
-                postsList.innerHTML += hiddenCard;
-              } else if (folder === 'projects') {
-                projectsList.innerHTML += hiddenCard;
-              }
-            }
-          }
-          itemCount++;
-        }
-      }
-
-    if (folder !== 'listening' && itemCount > maxVisibleItems) {
-      const container = folder === 'posts' ? postsList : projectsList;
-      createShowMoreButton(container);
-    }
+  :root {
+    --white: #ffffff;
+    --off-white: #f8f8f6;
+    --gray-100: #f0eeeb;
+    --gray-200: #e0ddd8;
+    --gray-400: #a09d98;
+    --gray-600: #6b6865;
+    --gray-900: #1a1917;
+    --accent: #2a2a2a;
+    --mono-light: #f4f3f0;
+    --radius: 3px;
   }
 
-        const createShowMoreButton = (container) => {
-        const button = document.createElement('button');
-        button.innerHTML = '➕ Show More';
-        button.classList.add('show-more');
-        button.style.color = 'gray'; // Set the text color to gray
-        button.style.marginTop = '10px'; // Add some margin on top
-        container.after(button);
+  html { scroll-behavior: smooth; }
 
-        button.addEventListener('click', () => {
-            const hiddenItems = container.querySelectorAll('.hidden');
-            hiddenItems.forEach(item => item.classList.remove('hidden'));
-            button.remove();
-        });
-    };
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--gray-900);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    folders.forEach(folder => {
-        fetchMarkdownFiles(folder);
-    });
-  </script>
-  <script>
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: '#888888'
-        },
-        shape: {
-          type: 'circle',
-          stroke: {
-            width: 0,
-            color: '#000000'
-          },
-          polygon: {
-            nb_sides: 5
-          }
-        },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#888888',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 6,
-          direction: 'none',
-          random: false,
-          straight: false,
-          out_mode: 'out',
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-          }
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'repulse'
-          },
-          onclick: {
-            enable: false
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 400,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
-  <script src="https://unpkg.com/elevator.js"></script>
-  <script>
-    const elevator = new Elevator({
-      mainAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/elevator.mp3",
-      endAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/ding.mp3",
-      duration: 5000,
-    });
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
-const footer = document.createElement("footer");
-footer.className = "mt-8 mb-4";
-const footerContent = document.createElement("div");
-footerContent.className = "flex items-center justify-between";
-footer.appendChild(footerContent);
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0 40px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-const copyright = document.createElement("div");
-copyright.className = "hidden md:flex";
-copyright.innerHTML = '&nbsp;&nbsp;&copy; ' + (new Date().getFullYear()) + ' Tris Papakonstantinou';
-footerContent.appendChild(copyright);
+  .nav-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--gray-900);
+  }
 
-const madeWith = document.createElement("div");
-madeWith.className = "hidden md:flex";
-madeWith.innerHTML = 'Imagined by Me - Realized with AI 🧠';
-footerContent.appendChild(madeWith);
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
 
-const elevatorBtnDiv = document.createElement("div");
-elevatorBtnDiv.innerHTML = 'You need an elevator ride?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
-elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
-elevatorBtnDiv.onclick = () => {
-  elevator.elevate();
-};
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-600);
+    transition: color 0.2s;
+  }
 
-footerContent.appendChild(elevatorBtnDiv);
-document.body.appendChild(footer);
-  </script>
-    <style>
-      @keyframes pulsate {
-        0% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-        50% {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-      }
-      #scroll-down-btn i {
-        animation: pulsate 1.5s linear infinite;
-      }
-    </style>
-    <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
-      <i class="fa-solid fa-v"></i>
-    </button>
-    <script>
-      const scrollDownBtn = document.getElementById('scroll-down-btn');
-      const headerContainer = document.getElementById('header-container');
+  .nav-links a:hover { color: var(--gray-900); text-decoration: none; }
 
-      const toggleScrollButtonVisibility = () => {
-        if (window.pageYOffset === 0) {
-          scrollDownBtn.style.display = 'flex';
-        } else {
-          scrollDownBtn.style.display = 'none';
-        }
-      }
+  /* MAIN LAYOUT */
+  .page { padding-top: 52px; }
 
-      scrollDownBtn.addEventListener('click', () => {
-        const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
-        window.scrollTo({top: yOffset, behavior: 'smooth'});
-      });
+  /* HERO */
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 80px;
+    align-items: start;
+  }
 
-      window.addEventListener('scroll', toggleScrollButtonVisibility);
-      toggleScrollButtonVisibility();
-    </script>
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--gray-400);
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--gray-900);
+    margin-bottom: 28px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gray-600);
+  }
+
+  .hero-bio {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--gray-600);
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  .hero-bio a { color: var(--gray-900); border-bottom: 1px solid var(--gray-200); }
+  .hero-bio a:hover { border-color: var(--gray-900); text-decoration: none; }
+
+  .hero-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: 100px;
+    color: var(--gray-600);
+    transition: all 0.18s;
+    background: var(--white);
+    display: inline-block;
+  }
+
+  .pill:hover { background: var(--gray-900); color: var(--white); border-color: var(--gray-900); text-decoration: none; }
+
+  .hero-card {
+    background: var(--gray-100);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--gray-200);
+    margin-top: 12px;
+  }
+
+  .hero-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--gray-600);
+    overflow: hidden;
+  }
+
+  .hero-card-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .hero-card-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+  }
+
+  .hero-card-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--gray-200);
+    font-size: 13px;
+  }
+
+  .hero-card-stat-label { color: var(--gray-400); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; }
+  .hero-card-stat-val { color: var(--gray-900); font-weight: 500; }
+
+  /* DIVIDER */
+  .section-divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  /* SECTIONS */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.08em;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--gray-900);
+  }
+
+  /* WORK / PROJECT CARDS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .project-card {
+    background: var(--white);
+    padding: 28px 28px 24px;
+    transition: background 0.18s;
+    cursor: pointer;
+  }
+
+  .project-card:hover { background: var(--gray-100); }
+
+  .project-card-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+  }
+
+  .project-card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: var(--gray-900);
+  }
+
+  .project-card-desc {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .project-card-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .project-card-link::after { content: '→'; }
+
+  /* WRITING */
+  .writing-list { display: flex; flex-direction: column; gap: 0; }
+
+  .writing-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .writing-item:last-child { border-bottom: 1px solid var(--gray-200); }
+
+  .writing-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.04em;
+  }
+
+  .writing-title {
+    font-size: 15px;
+    color: var(--gray-900);
+    font-weight: 400;
+  }
+
+  .writing-pub {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* RESEARCH */
+  .research-list { display: flex; flex-direction: column; gap: 0; }
+
+  .research-item {
+    padding: 22px 0;
+    border-top: 1px solid var(--gray-200);
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .research-item:last-child { border-bottom: 1px solid var(--gray-200); }
+
+  .research-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: var(--gray-900);
+  }
+
+  .research-authors {
+    font-size: 12px;
+    color: var(--gray-400);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .research-venue {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--gray-600);
+    margin-bottom: 18px;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text a { color: var(--gray-900); border-bottom: 1px solid var(--gray-200); }
+  .about-text a:hover { border-color: var(--gray-900); text-decoration: none; }
+
+  .about-sidebar { display: flex; flex-direction: column; gap: 32px; }
+
+  .sidebar-block-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 14px;
+  }
+
+  .sidebar-links { display: flex; flex-direction: column; gap: 8px; }
+
+  .sidebar-link {
+    font-size: 14px;
+    color: var(--gray-900);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--gray-100);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    transition: all 0.15s;
+  }
+
+  .sidebar-link:hover { background: var(--gray-900); color: var(--white); border-color: var(--gray-900); text-decoration: none; }
+
+  .sidebar-link-mono {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gray-400);
+    margin-left: auto;
+  }
+
+  .sidebar-link:hover .sidebar-link-mono { color: var(--gray-400); }
+
+  /* CONTACT */
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--gray-900);
+    margin-bottom: 16px;
+  }
+
+  .contact-sub {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .contact-sub a { color: var(--gray-900); border-bottom: 1px solid var(--gray-200); }
+  .contact-sub a:hover { border-color: var(--gray-900); text-decoration: none; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+  }
+
+  .form-input, .form-textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--gray-900);
+    outline: none;
+    transition: border-color 0.15s;
+    width: 100%;
+  }
+
+  .form-input:focus, .form-textarea:focus { border-color: var(--gray-600); }
+  .form-textarea { min-height: 120px; resize: vertical; }
+
+  .form-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    background: var(--gray-900);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.18s;
+  }
+
+  .form-btn:hover { background: var(--gray-600); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--gray-200);
+    padding: 32px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-mono {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--gray-900); text-decoration: none; }
+
+  .full-alt {
+    background: var(--gray-100);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px 60px; }
+    .hero-card { max-width: 360px; }
+    .projects-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .contact-wrap { grid-template-columns: 1fr; gap: 48px; }
+    section { padding: 60px 24px; }
+    nav { padding: 0 24px; }
+    footer { padding: 28px 24px; }
+  }
+
+  @media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .writing-item { grid-template-columns: 1fr; gap: 4px; }
+    .writing-pub { display: none; }
+    .research-item { grid-template-columns: 1fr; gap: 8px; }
+    .research-venue { text-align: left; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">tris papakonstantinou</span>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-tag">Based in London, UK</div>
+      <h1 class="hero-title">Researcher,<br>technologist,<br><em>and builder.</em></h1>
+      <p class="hero-bio">
+        I work at the intersection of technology and human cognition. Currently at UCL & <a href="https://digitaltrustcouncil.com">Digital Trust Council</a>, thinking about how we build tools that are good for people. 
+        My research focuses on investigating belief representations in human and artificial minds. At the DTC I am leading research that builds incentives for trustworthy AI.
+
+        My background is in Cognitive Science (PhD, MSc) and Science and Technology Studies (MSc). I previously spent time at Google Deepmind, the Alan Turing Institute & the UK Department of Health and Social Care. 
+      </p>
+      <div class="hero-links">
+        <a href="#work" class="pill">Work</a>
+        <a href="#writing" class="pill">Writing</a>
+        <a href="#research" class="pill">Research</a>
+        <a href="https://twitter.com" class="pill">Twitter ↗</a>
+        <a href="https://github.com" class="pill">GitHub ↗</a>
+      </div>
+    </div>
+    <!-- <div>
+      <div class="hero-card">
+        <div class="hero-avatar">YN</div>
+        <div class="hero-card-name">Your Name</div>
+        <div class="hero-card-role">Researcher &amp; Builder</div>
+        <div class="hero-card-stat">
+          <span class="hero-card-stat-label">Current role</span>
+          <span class="hero-card-stat-val">Org Name</span>
+        </div>
+        <div class="hero-card-stat">
+          <span class="hero-card-stat-label">Focus area</span>
+          <span class="hero-card-stat-val">AI &amp; Society</span>
+        </div>
+        <div class="hero-card-stat">
+          <span class="hero-card-stat-label">Open to</span>
+          <span class="hero-card-stat-val">Collaborations</span>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- WORK -->
+  <div class="section-divider"></div>
+  <section id="work">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Selected work</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-tag">Product · 2024</div>
+        <div class="project-card-title">Project Alpha</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+      <div class="project-card">
+        <div class="project-card-tag">Research · 2024</div>
+        <div class="project-card-title">Project Beta</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+      <div class="project-card">
+        <div class="project-card-tag">Open Source · 2023</div>
+        <div class="project-card-title">Project Gamma</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+      <div class="project-card">
+        <div class="project-card-tag">Design · 2023</div>
+        <div class="project-card-title">Project Delta</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+      <div class="project-card">
+        <div class="project-card-tag">Writing · 2023</div>
+        <div class="project-card-title">Project Epsilon</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+      <div class="project-card">
+        <div class="project-card-tag">Collab · 2022</div>
+        <div class="project-card-title">Project Zeta</div>
+        <p class="project-card-desc">A short description of what this project is and why it matters. Keep it punchy.</p>
+        <span class="project-card-link">View project</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <div class="full-alt">
+    <section id="writing">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Writing</h2>
+      </div>
+      <div class="writing-list">
+        <div class="writing-item">
+          <span class="writing-date">Mar 2025</span>
+          <a href="#" class="writing-title">The title of your most recent essay or article</a>
+          <span class="writing-pub">The Atlantic</span>
+        </div>
+        <div class="writing-item">
+          <span class="writing-date">Jan 2025</span>
+          <a href="#" class="writing-title">Another piece you wrote that you're proud of</a>
+          <span class="writing-pub">Wired</span>
+        </div>
+        <div class="writing-item">
+          <span class="writing-date">Oct 2024</span>
+          <a href="#" class="writing-title">Something you wrote for a place you love</a>
+          <span class="writing-pub">Noema</span>
+        </div>
+        <div class="writing-item">
+          <span class="writing-date">Jul 2024</span>
+          <a href="#" class="writing-title">A personal essay or longer form piece</a>
+          <span class="writing-pub">Substack</span>
+        </div>
+        <div class="writing-item">
+          <span class="writing-date">Apr 2024</span>
+          <a href="#" class="writing-title">A collaborative piece or co-authored article</a>
+          <span class="writing-pub">NYT</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Research</h2>
+    </div>
+    <div class="research-list">
+      <div class="research-item">
+        <div>
+          <div class="research-title"><a href="#">Title of Your Key Paper or Research Output</a></div>
+          <div class="research-authors">You, Co-author A, Co-author B · 2025</div>
+        </div>
+        <div class="research-venue">NeurIPS 2025</div>
+      </div>
+      <div class="research-item">
+        <div>
+          <div class="research-title"><a href="#">Second Research Paper with a Longer Title That Wraps</a></div>
+          <div class="research-authors">You, Co-author C · 2024</div>
+        </div>
+        <div class="research-venue">arXiv · 2024</div>
+      </div>
+      <div class="research-item">
+        <div>
+          <div class="research-title"><a href="#">Third Publication — Maybe a Journal Article</a></div>
+          <div class="research-authors">Co-author D, You, Co-author E · 2023</div>
+        </div>
+        <div class="research-venue">Nature · 2023</div>
+      </div>
+      <div class="research-item">
+        <div>
+          <div class="research-title"><a href="#">Fourth Output — Report, Whitepaper, or Workshop</a></div>
+          <div class="research-authors">You, Org Name · 2023</div>
+        </div>
+        <div class="research-venue">Workshop · 2023</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="full-alt">
+    <section id="about">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hi, I'm [Your Name]. I'm currently [role] at <a href="#">[Organisation]</a>, where I work on [what you work on]. Before that, I did [previous thing] at [previous place].</p>
+          <p>I'm interested in [broad interest 1], [broad interest 2], and [broad interest 3]. Most of my work sits at the intersection of [field A] and [field B] — I care a lot about [the thing you care most about].</p>
+          <p>Before my current role, I [previous experience]. I have a degree in [field] from [university], and I grew up in [place].</p>
+          <p>Outside of work: [hobby or interest], [another interest], [something personal that makes you you].</p>
+        </div>
+        <div class="about-sidebar">
+          <div class="sidebar-block">
+            <div class="sidebar-block-label">Online</div>
+            <div class="sidebar-links">
+              <a href="#" class="sidebar-link">Twitter / X <span class="sidebar-link-mono">@handle</span></a>
+              <a href="#" class="sidebar-link">GitHub <span class="sidebar-link-mono">@handle</span></a>
+              <a href="#" class="sidebar-link">LinkedIn <span class="sidebar-link-mono">↗</span></a>
+              <a href="#" class="sidebar-link">Google Scholar <span class="sidebar-link-mono">↗</span></a>
+              <a href="#" class="sidebar-link">Substack <span class="sidebar-link-mono">↗</span></a>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <div class="sidebar-block-label">Elsewhere</div>
+            <div class="sidebar-links">
+              <a href="#" class="sidebar-link">CV / Resume <span class="sidebar-link-mono">PDF</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Get in touch</h2>
+    </div>
+    <div class="contact-wrap">
+      <div>
+        <p class="contact-intro">Let's work together, or just talk.</p>
+        <p class="contact-sub">I'm open to collaborations, speaking invitations, and interesting conversations. The best way to reach me is by email at <a href="mailto:you@domain.com">you@domain.com</a>.</p>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input class="form-input" type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="What's on your mind?"></textarea>
+        </div>
+        <button class="form-btn">Send message →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-mono">© 2025 Your Name</span>
+    <div class="footer-links">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
