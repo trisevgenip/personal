@@ -541,6 +541,152 @@
 
   .form-btn:hover { background: var(--gray-600); }
 
+  /* ─── WHITEPAPER SECTION ─────────────────────────────────────────────── */
+  .whitepaper-band {
+    background: var(--gray-900);
+    border-top: 1px solid var(--gray-900);
+    border-bottom: 1px solid var(--gray-900);
+  }
+
+  .whitepaper-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .whitepaper-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .whitepaper-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--gray-400);
+  }
+
+  .whitepaper-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 18px;
+  }
+
+  .whitepaper-title em {
+    font-style: italic;
+    color: var(--gray-400);
+  }
+
+  .whitepaper-desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--gray-400);
+    margin-bottom: 28px;
+    max-width: 420px;
+  }
+
+  .whitepaper-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 11px 22px;
+    background: var(--white);
+    color: var(--gray-900);
+    border-radius: 100px;
+    border: 1px solid var(--white);
+    transition: all 0.18s;
+    text-decoration: none;
+  }
+
+  .whitepaper-cta:hover {
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .whitepaper-cta-arrow {
+    transition: transform 0.18s;
+  }
+
+  .whitepaper-cta:hover .whitepaper-cta-arrow {
+    transform: translateX(3px);
+  }
+
+  /* card on the right side */
+  .whitepaper-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .whitepaper-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 14px;
+  }
+
+  .whitepaper-card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--white);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 20px;
+  }
+
+  .whitepaper-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .whitepaper-meta-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .whitepaper-meta-key {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--gray-600);
+  }
+
+  .whitepaper-meta-val {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+  }
+  /* ──────────────────────────────────────────────────────────────────────── */
+
   /* FOOTER */
   footer {
     border-top: 1px solid var(--gray-200);
@@ -584,6 +730,8 @@
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .contact-wrap { grid-template-columns: 1fr; gap: 48px; }
     .cv-frame { height: 70vh; min-height: 560px; }
+    .whitepaper-inner { grid-template-columns: 1fr; gap: 40px; padding: 56px 24px; }
+    .whitepaper-card { max-width: 480px; }
     section { padding: 60px 24px; }
     nav { padding: 0 24px; }
     footer { padding: 28px 24px; }
@@ -622,11 +770,10 @@
       <div class="hero-tag">Based in London, UK</div>
       <h1 class="hero-title">Researcher,<br>technologist,<br><em>and builder.</em></h1>
       <p class="hero-bio">
-       <p> [under construction] </p>
-        I work at the intersection of technology and human cognition. Currently at UCL & <a href="https://digitaltrustcouncil.com" target="_blank" rel="noopener noreferrer">Digital Trust Council</a>, thinking about how we build tools that are good for people.
+        I work at the intersection of technology and human cognition. Currently at UCL &amp; <a href="https://digitaltrustcouncil.com" target="_blank" rel="noopener noreferrer">Digital Trust Council</a>, thinking about how we build tools that are good for people.
         My research focuses on investigating belief representations in human and artificial minds. At the DTC I am leading research that builds incentives for trustworthy AI.
 
-        My background is in Cognitive Science (PhD, MSc) and Science and Technology Studies (MSc). I previously spent time at Google Deepmind, the Alan Turing Institute & the UK Department of Health and Social Care.
+        My background is in Cognitive Science (PhD, MSc) and Science and Technology Studies (MSc). I previously spent time at Google Deepmind, the Alan Turing Institute &amp; the UK Department of Health and Social Care.
       </p>
       <div class="hero-links">
         <a href="#work" class="pill">Work</a>
@@ -637,25 +784,45 @@
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="pill">GitHub ↗</a>
       </div>
     </div>
-    <!-- <div>
-      <div class="hero-card">
-        <div class="hero-avatar">YN</div>
-        <div class="hero-card-name">Your Name</div>
-        <div class="hero-card-role">Researcher &amp; Builder</div>
-        <div class="hero-card-stat">
-          <span class="hero-card-stat-label">Current role</span>
-          <span class="hero-card-stat-val">Org Name</span>
-        </div>
-        <div class="hero-card-stat">
-          <span class="hero-card-stat-label">Focus area</span>
-          <span class="hero-card-stat-val">AI &amp; Society</span>
-        </div>
-        <div class="hero-card-stat">
-          <span class="hero-card-stat-label">Open to</span>
-          <span class="hero-card-stat-val">Collaborations</span>
+  </div>
+
+  <!-- WHITEPAPER BAND -->
+  <div class="whitepaper-band" id="whitepaper">
+    <div class="whitepaper-inner">
+      <div>
+        <div class="whitepaper-eyebrow">Digital Trust Council</div>
+        <h2 class="whitepaper-title">When does the public<br>trust that AI does<br><em>more good than harm?</em></h2>
+        <p class="whitepaper-desc">
+          Our latest whitepaper explores the structural factors that shape public trust in AI — and what it would take to build institutions capable of sustaining it. Co-authored with the Digital Trust Council.
+        </p>
+        <a href="https://digitaltrustcouncil.com/research" target="_blank" rel="noopener noreferrer" class="whitepaper-cta">
+          Read the whitepaper
+          <span class="whitepaper-cta-arrow">→</span>
+        </a>
+      </div>
+      <div>
+        <div class="whitepaper-card">
+          <div class="whitepaper-card-label">Publication details</div>
+          <div class="whitepaper-card-title">Structural Factors Disrupting Public Trust that AI Creates More Benefit than Harm</div>
+          <div class="whitepaper-meta-row">
+            <span class="whitepaper-meta-key">Publisher</span>
+            <span class="whitepaper-meta-val">Digital Trust Council</span>
+          </div>
+          <div class="whitepaper-meta-row">
+            <span class="whitepaper-meta-key">Type</span>
+            <span class="whitepaper-meta-val">Whitepaper</span>
+          </div>
+          <div class="whitepaper-meta-row">
+            <span class="whitepaper-meta-key">Focus</span>
+            <span class="whitepaper-meta-val">AI governance &amp; public trust</span>
+          </div>
+          <div class="whitepaper-meta-row">
+            <span class="whitepaper-meta-key">Access</span>
+            <span class="whitepaper-meta-val">Open access ↗</span>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 
   <!-- WORK -->
@@ -789,12 +956,11 @@
       </div>
       <div class="about-grid">
         <div class="about-text">
-          
           <p>Hi, I'm Tris.
-             I work at the intersection of technology and human cognition. Currently at UCL & <a href="https://digitaltrustcouncil.com" target="_blank" rel="noopener noreferrer">Digital Trust Council</a>, thinking about how we build tools that are good for people.
+             I work at the intersection of technology and human cognition. Currently at UCL &amp; <a href="https://digitaltrustcouncil.com" target="_blank" rel="noopener noreferrer">Digital Trust Council</a>, thinking about how we build tools that are good for people.
              My research focuses on investigating belief representations in human and artificial minds. At the DTC I am leading research that builds incentives for trustworthy AI. My work is motivated by two critical issues of our time: navigating the attention economy and getting human-AI systems right.
 
-             My background is in Cognitive Science (PhD, MSc) and Science and Technology Studies (MSc). I previously spent time at Google Deepmind, the Alan Turing Institute & the UK Department of Health and Social Care.
+             My background is in Cognitive Science (PhD, MSc) and Science and Technology Studies (MSc). I previously spent time at Google Deepmind, the Alan Turing Institute &amp; the UK Department of Health and Social Care.
 
              I grew up in Athens, Greece, where I studied Philosophy and History of Science.</p>
           <p>Outside of work, I practice karate, write and enjoy going on really long walks in foreign cities.</p>
@@ -804,7 +970,6 @@
             <div class="sidebar-block-label">Online</div>
             <div class="sidebar-links">
               <a href="#" class="sidebar-link">Twitter / X <span class="sidebar-link-mono">@trisevgenipap</span></a>
-              <!-- <a href="#" class="sidebar-link">GitHub <span class="sidebar-link-mono">@handle</span></a> -->
               <a href="#" class="sidebar-link">LinkedIn <span class="sidebar-link-mono">↗</span></a>
               <a href="#" class="sidebar-link">Google Scholar <span class="sidebar-link-mono">↗</span></a>
               <a href="#" class="sidebar-link">Substack <span class="sidebar-link-mono">↗</span></a>
